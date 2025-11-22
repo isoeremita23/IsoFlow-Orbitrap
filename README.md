@@ -4,7 +4,6 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
-![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 
 **IsoFlow-Orbitrap** is a Python-based data processing workflow designed to extract, process, and visualize high-precision stable isotope ratios (e.g., $\delta^{15}\text{N}$, $\delta^{18}\text{O}$) from Thermo Fisher Orbitrap `.raw` files. 
 
