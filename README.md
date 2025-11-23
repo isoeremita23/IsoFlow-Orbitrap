@@ -1,4 +1,4 @@
-# IsoFlow-Orbitrap
+# IsoFlow-Orbitrap (DOI: 10.5281/zenodo.17687577)
 
 ### Automated Isotopic Ratio Analysis for Flow Injection ESI-Orbitrap
 
