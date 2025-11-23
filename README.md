@@ -1,6 +1,6 @@
 # IsoFlow-Orbitrap (DOI: 10.5281/zenodo.17687577)
 
-### Automated Isotopic Ratio Analysis for Flow Injection ESI-Orbitrap
+### An automated Python-based data extraction and processing workflow for Isotopic Ratio Analysis using Flow Injection ESI-Orbitrap 
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
