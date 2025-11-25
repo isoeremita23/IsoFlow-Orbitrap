@@ -21,7 +21,7 @@ TOLERANCE = 0.001 # m/z tolerance for peak matching
 # --- 2. ANALYSIS PARAMETERS ---
 # Define the specific m/z values to track.
 # Format: [Base_Peak_Mass, Isotopologue_1, Isotopologue_2, ...]
-TARGET_MZS = np.array([61.9884, 62.9854, 62.99258, 63.99261])
+TARGET_MZS = np.array([61.9884, 62.9854, 62.9920, 63.99261])
 
 # Mapping m/z values to human-readable names
 MZ_TO_ISOTOPOLOG = {
@@ -41,7 +41,7 @@ SAMPLE_NAME_TAG = 'USGS32' # The name string found in the filename for the Sampl
 
 # --- 4. ANALYSIS MODE ---
 # Options: 'VALIDATION' (We know the sample deltas) or 'UNKNOWN' (Real sample analysis)
-ANALYSIS_MODE = 'UNKNOWN' 
+ANALYSIS_MODE = 'VALIDATION' 
 
 # --- 5. REFERENCE & SAMPLE DATA (Certified Values) ---
 # Ratios of the standard relative to which deltas are calculated (e.g., Air-N2, VSMOW)
@@ -340,6 +340,10 @@ def generate_shot_noise_plots(df, output_dir):
         ax.xaxis.set_major_formatter(FixedFormatter(['1', '2', '5', '10']))
         ax.yaxis.set_major_locator(FixedLocator([0.1, 1, 10]))
         ax.yaxis.set_major_formatter(FixedFormatter(['0.1', '1', '10']))
+        ax.xaxis.set_minor_formatter(LogFormatter(base=10.0, labelOnlyBase=False))
+        ax.yaxis.set_minor_formatter(LogFormatter(base=10.0, labelOnlyBase=False))
+        ax.xaxis.set_minor_locator(FixedLocator([]))
+        ax.yaxis.set_minor_locator(FixedLocator([]))
         
         ax.legend()
         ax.set_title(f"{sample} - Injection {inj}\nCumulative Shot Noise Analysis")
